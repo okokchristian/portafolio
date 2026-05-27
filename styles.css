@@ -300,6 +300,30 @@ h2 {
   gap: 15px;
 }
 
+.btn {
+  padding: 10px 22px;
+  border-radius: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.15s ease;
+}
+
+.btn:hover {
+  background: #9b8cc9;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn.outline {
+  border: 2px solid currentColor;
+}
+
+.btn.outline:hover {
+  background: #9b8cc9;
+  border-color: #9b8cc9;
+  color: #fff;
+  transform: translateY(-2px);
+}
 /* hover imagen */
 .project img:hover {
   transform: scale(1.05);
