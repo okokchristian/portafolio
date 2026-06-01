@@ -28,13 +28,14 @@ body {
   
 }
 .nav-links {
+  white-space: nowrap;
   display: flex;
   gap: 50px;
   list-style: none;
 }
 
 .nav-links a {
-  font-size: 20px; /* tamaño letra navbar */
+  font-size: 17px; /* tamaño letra navbar */
   text-decoration: none;
   color: #111; 
   
@@ -68,7 +69,7 @@ body {
 .container {
   width: 90%;
   max-width: 1100px;
-  font-size: 20px;
+  font-size: 17px; /* fuente en general hero*/
   margin: auto;
 }
 
