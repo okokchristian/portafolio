@@ -6,18 +6,81 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Urbanist", arial,sans-serif;
-   
+  font-family: "Urbanist", arial, sans-serif;
 }
 
 body {
   background: #f5f5f5;
   color: #111;
-
 }
 
-/* ---------------- NAVBAR ----------------*/
+.container {
+  width: 90%;
+  max-width: 1100px;
+  font-size: 20px; /* fuente general hero*/
+  margin: auto;
+}
 
+h2 {
+  font-size: 3rem;
+}
+
+.highlight {
+  color: var(--primary);
+}
+
+
+/* ----------------- botones e iconos de contacto) --------------*/
+
+  .btn {
+  display: inline-block;
+  padding: 10px 22px;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.15s ease;
+}
+
+.btn:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn.outline {
+  background: transparent;
+  border: 2px solid currentColor;
+  color: #111;
+}
+
+.btn.outline:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.contact-icons a {
+  font-size: 35px;
+  color: #111;
+  transition: 0.3s;
+}
+
+.contact-icons a:hover {
+  color: var(--primary);
+  transform: scale(1.2);
+}
+
+/* ------------------- navbar ------------------------ */
 .nav {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -25,23 +88,26 @@ body {
   padding: 10px;
   font-size: 20px;
   background-color: transparent;
-  
 }
+
 .nav-links {
-  white-space: nowrap;
   display: flex;
   gap: 50px;
   list-style: none;
 }
 
 .nav-links a {
-  font-size: 17px; /* tamaño letra navbar */
+  white-space: nowrap;
+  font-size: 20px;
   text-decoration: none;
-  color: #111; 
-  
+  color: #111;
 }
 
-/* ------------------ HERO ---------------------*/
+.logo span {
+  color: var(--primary);
+}
+
+/* -------------------- hero ----------------------*/
 .hero {
   height: 100vh;
   display: flex;
@@ -62,159 +128,30 @@ body {
 
 .hero-role {
   font-size: 3.5rem;
-  color: #9b8cc9;
+  color: var(--primary);
   margin-top: 10px;
-}
-
-.container {
-  width: 90%;
-  max-width: 1100px;
-  font-size: 17px; /* fuente en general hero*/
-  margin: auto;
-}
-
-h2 {
-  font-size: 3rem;
-}
-
-.highlight {
-  color: #9b8cc9;
 }
 
 .buttons {
   margin-top: 20px;
-  
 }
 
-.btn {
-  padding: 10px 20px;
-  background: #111;
-  color: #fff;
-  margin-right: 10px;
-  text-decoration: none;
-  border-radius: 100px;
-  
-}
-
-.btn.outline {
-  background: transparent;
-  border: 1px solid #111;
-  color: #111;
-}
-
-/* SECTIONS */
+/* ------------------------- sections --------------------- */
 .section {
   padding: 100px 0;
   text-align: center;
-  font-size: 1;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
 }
 
-/* PROJECT */
-.project {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-  margin-top: 50px;
-}
+.section:nth-child(2) { animation-delay: 0.2s; }
+.section:nth-child(3) { animation-delay: 0.4s; }
+.section:nth-child(4) { animation-delay: 0.6s; }
 
-.logo span {
-    color:#9b8cc9
-} 
-.contact-icons {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 20px;
-}
-
-.contact-icons a {
-  font-size: 34px;
-  color: #111;
-  transition: 0.3s;
-}
-
-.contact-icons a:hover {
-  color: #9b8cc9;
-  transform: scale(1.2);
-}
-
-.section .skills {
-  display: grid;
-  grid-template-columns: repeat(3, 120px);
-  justify-content: center;
-  gap: 20px;
-}
-
-.section .skill {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-}
-
-.skill i {
-  font-size: 70px;
-  color: #111;
-  transition: 0.3s;
-}
-
-.skill p {
-  margin: 0;
-  font-size: 14px;
-  color: #555;
-}
-
-.skill:hover i {
-  color: var(--primary);
-  transform: scale(1.2);
-}
-
-@media (max-width: 768px) {
-  .skills {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-#skills h2 {
-  margin-bottom: 40px;
-}
-
+/* ----------------- about me --------------------- */
 #about h2 {
-    margin-bottom: 30px;
-} 
-
-.footer {
-  padding: 60px 0;
-  text-align: center;
-  background: #f0eeee;
-  margin-top: 100px;
-}
-
-.footer h3 {
-  margin-bottom: 20px;
-}
-
-.contact-icons {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-bottom: 20px;
-}
-
-.contact-icons a {
-  font-size: 35px;
-  color: #111;
-  transition: 0.3s;
-}
-
-.contact-icons a:hover {
-  color: var(--primary);
-  transform: scale(1.2);
-}
-
-.footer-text {
-  font-size: 14px;
-  color: #777;
+  margin-bottom: 30px;
 }
 
 .about-info {
@@ -248,6 +185,7 @@ h2 {
   border-radius: 30px;
   transition: 0.3s;
 }
+
 .resume-btn::after {
   content: "";
   display: block;
@@ -264,14 +202,85 @@ h2 {
   border-color: var(--primary);
 }
 
-/*------------- PROJECTS -------------------*/
+/* ------------------- skills ------------------ */
+#skills h2 {
+  margin-bottom: 40px;
+}
+
+.section .skills {
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  justify-content: center;
+  gap: 20px;
+}
+
+.section .skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.skill i {
+  font-size: 70px;
+  color: #111;
+  transition: 0.3s;
+}
+
+.skill p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.skill:hover i {
+  color: var(--primary);
+  transform: scale(1.2);
+}
+
+/* ------------------- currently learning ------------------ */
+.learning-container {
+  margin-top: 50px;
+  padding-top: 30px;
+}
+
+.learning-title {
+  font-size: 20px;
+  color: #000000;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.learning-skills {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.learning-item i {
+  color: #000000;
+  filter: grayscale(40%);
+}
+
+.learning-item:hover i {
+  filter: grayscale(0%);
+  color: var(--primary);
+}
+
+/* ----------------- proyectos ----------------------- */
 .project {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 50px;
   margin-top: 80px;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 0.8s ease forwards;
 }
+
+.project:nth-child(2) { animation-delay: 0.2s; }
+.project:nth-child(3) { animation-delay: 0.4s; }
 
 .project.reverse {
   flex-direction: row-reverse;
@@ -299,93 +308,30 @@ h2 {
   transition: 0.3s;
 }
 
-/* botones */
+.project img:hover {
+  transform: scale(1.05);
+}
+
 .project-buttons {
   display: flex;
   gap: 15px;
 }
 
-.btn {
-  padding: 10px 22px;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.15s ease;
+/* ------------------- footer ---------------------- */
+.footer {
+  padding: 60px 0;
+  text-align: center;
+  background: #f0eeee;
+  margin-top: 100px;
 }
 
-.btn:hover {
-  background: #9b8cc9;
-  color: #fff;
-  transform: translateY(-2px);
+.footer h3 {
+  margin-bottom: 20px;
 }
 
-.btn.outline {
-  border: 2px solid currentColor;
-}
-
-.btn.outline:hover {
-  background: #9b8cc9;
-  border-color: #9b8cc9;
-  color: #fff;
-  transform: translateY(-2px);
-}
-/* hover imagen */
-.project img:hover {
-  transform: scale(1.05);
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .project {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .project.reverse {
-    flex-direction: column;
-  }
-
-  .project-text {
-    text-align: center;
-  }
-}
-
-.project {
-  opacity: 0;
-  transform: translateY(40px);
-  animation: fadeUp 0.8s ease forwards;
-}
-
-.project:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.project:nth-child(3) {
-  animation-delay: 0.4s;
-}
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.section {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeUp 0.8s ease forwards;
-}
-
-.section:nth-child(2) { animation-delay: 0.2s; }
-.section:nth-child(3) { animation-delay: 0.4s; }
-.section:nth-child(4) { animation-delay: 0.6s; }
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.footer-text {
+  font-size: 14px;
+  color: #777;
 }
 
 #particles-js {
@@ -397,39 +343,19 @@ h2 {
   left: 0;
 }
 
-/* ------------------ CURRENTLY LEARNING -------------*/
-.learning-container {
-  margin-top: 50px;
-  padding-top: 30px;
+/* ---------------- animaciones y responsividad ---------------------*/
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.learning-title {
-  font-size: 20px;
-  color: #000000;
-  margin-bottom: 25px;
-  font-weight: 600;
-}
-
-.learning-skills {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-}
-
-.learning-item i {
-  color: #000000; 
-  filter: grayscale(40%);
-}
-
-.learning-item:hover i {
-  filter: grayscale(0%);
-  color: var(--primary);
-}
-
-/* ------------ RESPONSIVIDAD -------------------*/
-
-/* ===== MOBILE RESPONSIVENESS (Hasta 768px) ===== */
+/* --------------- TABLETS Y MOBILE (hasta 768px) --------------- */
 @media (max-width: 768px) {
+  .container {
+    width: 92%;
+  }
 
   .nav {
     display: flex;
@@ -457,7 +383,7 @@ h2 {
   .hero-name {
     font-size: 4.2rem;
     letter-spacing: -2px;
-    line-height: 0.95;  
+    line-height: 0.95;
     margin-bottom: 10px;
   }
 
@@ -472,11 +398,6 @@ h2 {
     gap: 10px;
   }
 
-  .btn {
-    margin-right: 0;
-  }
-
-  /* SECTIONS */
   .section {
     padding: 60px 0;
   }
@@ -485,7 +406,6 @@ h2 {
     font-size: 2rem;
   }
 
-  /* ------------------ SKILLS --------------------- */
   .section .skills {
     grid-template-columns: repeat(2, 110px);
     gap: 24px;
@@ -523,14 +443,12 @@ h2 {
     justify-content: center;
   }
 
-  /* ----------------------- ABOUT -------------------- */
   .about-info {
     flex-direction: column;
     align-items: center;
     gap: 16px;
   }
 
-  /* ------------------------  FOOTER -------------------*/
   .footer {
     padding: 40px 16px;
     margin-top: 60px;
@@ -539,15 +457,10 @@ h2 {
   .contact-icons {
     gap: 20px;
   }
-
-  .container {
-    width: 92%;
-  }
 }
 
-/* ===== CELULARES PEQUEÑOS (Menos de 400px) ===== */
+/* ---------------- CELULARES PEQUEÑOS (menos de 400px) ------------ */
 @media (max-width: 400px) {
-  
   .hero-name {
     font-size: 3.5rem;
     line-height: 0.95;
