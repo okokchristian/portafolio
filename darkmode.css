@@ -509,6 +509,8 @@ body.dark-theme .nav-links {
     max-width: 100%;
     height: auto;
     display: block;
+    border-radius: 20px;
+    transition: 0.3s;
   }
 
   .project-buttons {
