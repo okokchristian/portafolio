@@ -449,6 +449,7 @@ body.dark-theme .nav-links {
 
 /* --- ----------responsividad  -------------------- */
 @media (max-width: 768px) {
+
   .nav {
     display: flex;
     justify-content: center;
@@ -458,7 +459,7 @@ body.dark-theme .nav-links {
 
   .nav-links {
     width: 250px;
-    gap: 30px;
+    gap: 40px;
   }
 
   .nav-links a {
@@ -469,4 +470,49 @@ body.dark-theme .nav-links {
   .theme-switch-wrapper {
     right: 20px !important;
   }
-} 
+
+  /* HERO */
+  .hero {
+    height: auto;
+    min-height: 100vh;
+    padding: 100px 0 60px;
+  }
+
+  .hero-name {
+    font-size: 4rem;
+  }
+
+  .hero-role {
+    font-size: 2.5rem;
+  }
+
+  /* PROJECTS */
+  .project {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+    margin-top: 50px;
+  }
+
+  .project.reverse {
+    flex-direction: column !important;
+  }
+
+  .project-text {
+    text-align: center;
+    width: 100%;
+  }
+
+  .project img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .project-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
