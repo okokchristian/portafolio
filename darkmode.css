@@ -55,8 +55,8 @@ h2 {
 
 .theme-switch-wrapper {
   position: fixed;
-  top: 15px;
-  right: 20px;
+  top: 25px;
+  right: 40px !important;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -152,41 +152,94 @@ body.dark-theme .moon-icon { color: #a78bfa; }
 }
 
 /* --------------navbar --------------- */
+
 .nav {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  padding: 10px;
-  font-size: 20px;
+  display: flex;
+  justify-content: space-between; 
   background-color: transparent;
+  position: relative;
+  z-index: 1000;
+  width: 100%;
+}
+
+.hamburger {
+  display: block;
+  background: none;
+  border: none;
+  color: var(--text-main);
+  font-size: 2rem;
+  cursor: pointer;
+  position: fixed; 
+  top: 25px;
+  left: 40px;    
+  z-index: 100000;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.hamburger:hover {
+  color: var(--primary);
+  transform: scale(1.1);
 }
 
 .nav-links {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 250px;
+  height: 100vh;
+
+  background: rgba(222, 217, 217, 0.75);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  box-shadow: 10px 0 30px rgba(47, 47, 47, 0.15);
+
   display: flex;
-  gap: 50px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   list-style: none;
+
+  transform: translateX(-100%);
+  transition: transform 0.4s cubic-bezier(0.77,0.2,0.05,1.0);
+
+  z-index: 99999;
 }
 
-.nav-links :hover {
-  transform: translateY(-3px);
-  color: var(--primary)
-} 
+.nav-links.active {
+  transform: translateX(0);
+}
+
+.nav-links li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .nav-links a {
-  white-space: nowrap;
-  font-size: 20px;
+  font-size: 26px;
   text-decoration: none;
   color: var(--text-main);
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: block; 
+  padding: 25px 0; 
+  text-align: center;
+  width: 100%;
 }
 
-.logo {
-  color: var(--text-main);
-}
-
-.logo span {
+.nav-links a:hover {
   color: var(--primary);
+  transform: translateX(-5px); 
 }
 
+body.dark-theme .nav-links {
+  background: rgba(20, 20, 20, 0.75); /* Fondo oscuro esmerilado */
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+}
 /* ---------------hero-------------- --- */
 .hero {
   height: 100vh;
@@ -396,17 +449,24 @@ body.dark-theme .moon-icon { color: #a78bfa; }
 
 /* --- ----------responsividad  -------------------- */
 @media (max-width: 768px) {
-  .nav { display: flex; justify-content: center; gap: 30px; padding: 12px 16px; }
-  .nav-links { gap: 12px; font-size: 15px; }
-  .hero { height: auto; min-height: 100vh; padding: 100px 0 60px; }
-  .hero-name { font-size: 3.5rem; }
-  .hero-role { font-size: 2.2rem; }
-  .section { padding: 60px 0; }
-  h2 { font-size: 2rem; }
-  .section .skills { grid-template-columns: repeat(2, 110px); }
-  .project { flex-direction: column; gap: 24px; text-align: center; }
-  .project.reverse { flex-direction: column; }
-  .project img { width: 100%; max-width: 100%; }
-  .project-buttons { justify-content: center; }
-  .about-info { flex-direction: column; align-items: center; }
-}
+  .nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 12px 16px;
+  }
+
+  .nav-links {
+    width: 250px;
+    gap: 30px;
+  }
+
+  .nav-links a {
+    font-size: 20px;
+    padding: 14px 0;
+  }
+
+  .theme-switch-wrapper {
+    right: 20px !important;
+  }
+} 
