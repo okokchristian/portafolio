@@ -96,6 +96,11 @@ h2 {
   list-style: none;
 }
 
+.nav-links :hover {
+  transform: translateY(-3px);
+  color: var(--primary)
+} 
+
 .nav-links a {
   white-space: nowrap;
   font-size: 20px;
@@ -132,6 +137,12 @@ h2 {
   margin-top: 10px;
 }
 
+.hero-do {
+font-size: 20px;
+font-weight: normal;
+color: #777;
+} 
+
 .buttons {
   margin-top: 20px;
 }
@@ -157,42 +168,45 @@ h2 {
 .about-info {
   display: flex;
   justify-content: center;
-  gap: 40px;
-  margin-top: 30px;
   flex-wrap: wrap;
+  gap: 15px;       /* espaciado entre etiquetas */
+  margin-top: 30px;
+  margin-bottom: 35px;
 }
 
+
 .info-item {
+  background: rgba(120, 120, 120, 0.08); 
+  border: 1px solid var(--border-card);   
+  padding: 8px 16px;
+  border-radius: 30px;                     
+  font-size: 0.95rem;
+  color: var(--text);                   
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #555;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.info-item:hover {
+  background: rgba(120, 120, 120, 0.15);
+  transform: translateY(-2px);
 }
 
 .info-item i {
-  color: var(--primary);
+  color: var(--primary); /* Usa el violeta dinámico (más claro en modo oscuro) */
   font-size: 18px;
 }
 
 .resume-btn {
+   background: rgba(120, 120, 120, 0.08); 
   display: inline-block;
-  margin-top: 30px;
+  margin-top: 10px;
   padding: 10px 25px;
   font-size: 16px;
   text-decoration: none;
   color: #111;
-  border: 1px solid #111;
   border-radius: 30px;
-  transition: 0.3s;
-}
-
-.resume-btn::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px;
-  background: var(--primary);
-  margin-top: 5px;
   transition: 0.3s;
 }
 
@@ -200,6 +214,7 @@ h2 {
   background: var(--primary);
   color: #fff;
   border-color: var(--primary);
+  transform: translateY(-2px);
 }
 
 /* ------------------- skills ------------------ */
@@ -267,6 +282,14 @@ h2 {
   color: var(--primary);
 }
 
+.learning-item a {
+  text-decoration: none;
+}
+
+.learning-item i {
+  text-decoration: none;
+}
+
 /* ----------------- proyectos ----------------------- */
 .project {
   display: flex;
@@ -319,19 +342,127 @@ h2 {
 
 /* ------------------- footer ---------------------- */
 .footer {
-  padding: 60px 0;
-  text-align: center;
   background: #f0eeee;
+  padding: 80px 0 40px;
   margin-top: 100px;
+  border-top: 1px solid var(--border-card);
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  max-width: 600px;
+  margin: 0 auto;
+  width: 90%;
 }
 
 .footer h3 {
-  margin-bottom: 20px;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 35px;
+  color: var(--text);
+}
+
+.footer h3 span {
+  color: #4ade80;
+}
+
+/* --------------- formulario de contacto------------------------- */
+
+.contact-form-wrapper {
+  width: 100%;
+  margin-bottom: 40px; /* borde formulario */
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 4px; 
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  background-color: #e3e3e3; /* color fondo formulario */
+  border: none;
+  padding: 16px 20px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 1.05rem;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+.contact-form input:first-child {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.contact-form textarea {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  resize: vertical;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #575656; /* color texto formualario*/
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background-color: #cecfd2; /* Se aclara cuando el usuario escribe */
+}
+
+.form-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.btn-submit {
+  background-color: #000000; /* color boton submit */
+  color: #ffffff;
+  border: none;
+  padding: 12px 35px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-submit:hover {
+  background-color: var(--primary); /* Se pinta de tu violeta al pasar el mouse */
+  transform: translateY(-2px);
+}
+/* ----------------- socials ------------------*/
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 25px;
+}
+
+.contact-icons a {
+  font-size: 2.2rem;
+  color: var(--text-muted);
+  transition: color 0.3s, transform 0.3s;
+}
+
+.contact-icons a:hover {
+  color: var(--primary);
+  transform: scale(1.15);
 }
 
 .footer-text {
   font-size: 14px;
-  color: #777;
+  color: var(--text-muted); /* Cambiado de #777 a tu variable adaptativa */
+  opacity: 0.7;
 }
 
 #particles-js {
