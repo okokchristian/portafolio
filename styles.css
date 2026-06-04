@@ -166,14 +166,14 @@ color: #777;
 }
 
 .about-info {
-  display: flex;
+  display: flex !important;
+  flex-direction: row !important;
   justify-content: center;
   flex-wrap: wrap;
   gap: 15px;       /* espaciado entre etiquetas */
   margin-top: 30px;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
 }
-
 
 .info-item {
   background: rgba(120, 120, 120, 0.08); 
@@ -386,10 +386,10 @@ color: #777;
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  background-color: #e3e3e3; /* color fondo formulario */
+  background-color: #e3e3e3b9; /* color fondo formulario */
   border: none;
   padding: 16px 20px;
-  color: #ffffff;
+  color: #575656;
   font-family: inherit;
   font-size: 1.05rem;
   outline: none;
@@ -425,12 +425,11 @@ color: #777;
 
 .btn-submit {
   background-color: #000000; /* color boton submit */
-  color: #ffffff;
-  border: none;
+  color: #ffffff; /* color texto submit*/
   padding: 12px 35px;
   font-size: 1.05rem;
   font-weight: 600;
-  border-radius: 6px;
+  border-radius: 30px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
 }
