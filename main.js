@@ -27,4 +27,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
+    // --- OCULTAR/MOSTRAR NAVBAR AL HACER SCROLL ---
+    let lastScroll = 0;
+    const header = document.querySelector("header");
+
+    window.addEventListener("scroll", () => {
+        const currentScroll = window.scrollY;
+
+        // Si el menú está abierto, no ocultamos el header
+        if (navLinks.classList.contains("active")) return;
+
+        if (currentScroll > lastScroll && currentScroll > 80) {
+            header.classList.add("nav-hidden"); // bajando -> ocultar
+        } else {
+            header.classList.remove("nav-hidden"); // subiendo -> mostrar
+        }
+
+        lastScroll = currentScroll <= 0 ? 0 : currentScroll;
+    });
+
 });

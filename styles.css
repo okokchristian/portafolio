@@ -104,7 +104,15 @@ h2 {
   width: 100%;
 }
 
-/* BOTÓN HAMBURGUESA */
+header {
+  transition: transform 0.4s ease;
+}
+
+header.nav-hidden {
+  transform: translateY(-150%);
+}
+
+/*  ------------ BOTÓN HAMBURGUESA ------------- */
 
 .hamburger {
   position: fixed;
@@ -123,7 +131,7 @@ h2 {
   transform: scale(1.1);
 }
 
-/* CORTINA */
+/* ----------- CORTINA DEL MENU ----------*/
 
 .nav-links {
   position: fixed;
@@ -201,17 +209,14 @@ h2 {
 }
 
 .nav-links a {
-  font-size: 32px;
+  font-size: 28px; /*tamaño letra menu*/
   text-decoration: none;
   color: #111;
   font-weight: 600;
-
   display: block;
   width: 100%;
-  padding: 25px 0;
-
+  padding: 18px 0; /*separacion link menu*/
   text-align: center;
-
   transition: all 0.3s ease;
 }
 
@@ -407,19 +412,25 @@ h2 {
 }
 
 /* ----------------- proyectos ----------------------- */
-.project{
-  padding:40px;
-
-  border-radius:30px;
-
-  background:
-  rgba(255, 255, 255, 0.066);
-
+.project {
+  display: flex;         /* ESTO ES LO QUE FALTA */
+  align-items: center;   /* Alinea verticalmente el texto y la imagen */
+  gap: 40px;             /* Espacio entre el texto y la imagen */
+  padding: 40px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.066);
   backdrop-filter: blur(10px);
-
-  box-shadow:
-  0 10px 30px rgba(0,0,0,.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,.05);
+  margin-bottom: 30px;   /* Añade espacio entre proyectos */
 }
+
+.project-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
 .project:nth-child(2) { animation-delay: 0.2s; }
 .project:nth-child(3) { animation-delay: 0.4s; }
 
@@ -472,6 +483,10 @@ h2 {
   background:rgba(155,140,201,.12);
   color:var(--primary);
   font-size:.85rem;
+}
+
+#projects h2 {
+  margin-bottom: 50px; /*separación texto projects de card*/
 }
 
 /* ------------------- footer ---------------------- */
@@ -673,11 +688,6 @@ h2 {
     gap: 40px;
   }
 
-  .nav-links a {
-    font-size: 24px;
-    padding: 18px 0;
-  }
-
   .hero {
     height: auto;
     min-height: 100vh;
@@ -753,6 +763,10 @@ h2 {
   flex-wrap: wrap;
 }
  
+.project-tags {
+  justify-content: center;
+}
+
   .about-info {
     flex-direction: column;
     align-items: center;
@@ -793,3 +807,4 @@ h2 {
     right: 80px !important; /* Lo acomodamos un cachito más cerca en celulares */
   }
 } 
+

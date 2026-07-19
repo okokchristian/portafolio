@@ -487,13 +487,14 @@ body.dark-theme .nav-links {
   }
 
   /* PROJECTS */
-  .project {
-    flex-direction: column !important;
-    align-items: center;
-    text-align: center;
-    gap: 25px;
-    margin-top: 50px;
-  }
+.project {
+  flex-direction: column !important; /* Esto está bien */
+  margin-top: 50px;
+  /* IMPORTANTE: Añade esto para que el contenido se vea bien */
+  display: flex;
+  align-items: center; 
+  text-align: center;
+}
 
   .project.reverse {
     flex-direction: column !important;
@@ -517,4 +518,13 @@ body.dark-theme .nav-links {
     justify-content: center;
     flex-wrap: wrap;
   }
+}
+
+.project {
+  flex-direction: column !important; /* Esto está bien */
+  margin-top: 50px;
+  /* IMPORTANTE: Añade esto para que el contenido se vea bien */
+  display: flex;
+  align-items: center; 
+  text-align: center;
 }

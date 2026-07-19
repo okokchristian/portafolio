@@ -14,13 +14,13 @@
 
   <link rel="preload" href="styles.css" as="style">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="darkmode.css">
+  <!--link rel="stylesheet" href="darkmode.css"!-->
   
 </head>
 <body>
 
   <!------------------ boton modo oscuro ----------------->
-<div class="theme-switch-wrapper" id="themeToggle">
+<!--div class="theme-switch-wrapper" id="themeToggle">
   <i class="fas fa-sun sun-icon"></i>
   <div class="custom-switch">
     <div class="custom-ball"></div>
@@ -43,6 +43,20 @@
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
+
+    <div class="contact-icons">
+      <a href="https://github.com/okokchristian" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-github"></i>
+      </a>
+
+      <a href="https://www.linkedin.com/in/christianquintanagomez/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-linkedin"></i>
+      </a>
+
+      <a href="mailto:christiangabrielquintanagomez@hotmail.com">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
     </ul>
   </nav>
 </header>
@@ -102,12 +116,11 @@
 </a>
 </section>
 
-  <!----------------------- PROJECTS ----------------->
-  <section id="projects" class="section">
+  <!----------------------- PROJECTS ----------------->  <section id="projects" class="section">
     <div class="container">
       <h2>Projects</h2>
 
-  <!------- PROYECTO LANDING ARTISTA ------>
+ <!------- PROYECTO LANDING ARTISTA ------>
 <div class="project">
   <div class="project-text">
     <h3>Artist Landing Page</h3>
@@ -116,73 +129,73 @@
       Features album showcase, Spotify and Apple Music integration, 
       social links, and an embedded track player.
     </p>
+
+    <div class="project-tags">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+    </div>
   </div>
 
-  <img src="img/artist.png" alt="Artist landing page project">
-
-  <div class="project-tags">
-    <span>HTML</span>
-    <span>CSS</span>
-    <span>JavaScript</span>
-  </div>
-
-  <div class="project-buttons">
-    <a href="https://alextaktonweb.netlify.app/" class="btn">Live Demo</a>
-    <a href="https://github.com/okokchristian/alextakton-web.git" class="btn outline">GitHub</a>
+  <div class="project-media">
+    <img src="img/artist.png" alt="Artist landing page project">
+    <div class="project-buttons">
+      <a href="https://alextaktonweb.netlify.app/" class="btn">Live Demo</a>
+      <a href="https://github.com/okokchristian/alextakton-web.git" class="btn outline">GitHub</a>
+    </div>
   </div>
 </div>
 
 
-    <!----------- PROYECTO VELAS -------->
-    <div class="project reverse">
-      <div class="project-text">
-        <h3>Candles Landing Page</h3>
-        <p>
-          Minimal and modern landing page focused on clean UI and 
-          aesthetic design. Built with responsive layout principles.
-        </p>
-      </div>
+<!----------- PROYECTO VELAS -------->
+<div class="project reverse">
+  <div class="project-text">
+    <h3>Candles Landing Page</h3>
+    <p>
+      Minimal and modern landing page focused on clean UI and 
+      aesthetic design. Built with responsive layout principles.
+    </p>
 
-            <img src="img/Velas.png" alt="Candles project">
-
-       <div class="project-tags">
-    <span>HTML</span>
-    <span>CSS</span>
+    <div class="project-tags">
+      <span>HTML</span>
+      <span>CSS</span>
+    </div>
   </div>
 
-
-        <div class="project-buttons">
-          <a href="https://landingpagevelasaromaticas.netlify.app/" class="btn">Live Demo</a>
-          <a href="https://github.com/okokchristian/Velas_arom-ticas.git" class="btn outline">GitHub</a>
-
+  <div class="project-media">
+    <img src="img/Velas.png" alt="Candles project">
+    <div class="project-buttons">
+      <a href="https://landingpagevelasaromaticas.netlify.app/" class="btn">Live Demo</a>
+      <a href="https://github.com/okokchristian/Velas_arom-ticas.git" class="btn outline">GitHub</a>
     </div>
+  </div>
+</div>
+
+
+<!------- PROYECTO ECOM------>
+<div class="project">
+  <div class="project-text">
+    <h3>Web E-commerce</h3>
+    <p>
+      Responsive e-commerce with product filtering, shopping cart 
+      and user profile features. Includes dark mode and checkout flow.
+    </p>
+
+    <div class="project-tags">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
     </div>
-
-          <!------- PROYECTO ECOM------>
-    <div class="project">
-      <div class="project-text">
-        <h3>Web E-commerce</h3>
-        <p>
-          Responsive e-commerce with product filtering, shopping cart 
-          and user profile features. Includes dark mode and checkout flow.
-        </p>
-      </div>
-
-
-      <img src="img/ecommerce.png" alt="Ecommerce project">
-
-       <div class="project-tags">
-    <span>HTML</span>
-    <span>CSS</span>
-    <span>JavaScript</span>
   </div>
 
-        <div class="project-buttons">
-          <a href="https://jap-ecommerce.netlify.app/loginb" class="btn">Live Demo</a>
-          <a href="https://github.com/emanueldeabreu/proyectoJaP.git" class="btn outline">GitHub</a>
-        </div>
+  <div class="project-media">
+    <img src="img/ecommerce.png" alt="Ecommerce project">
+    <div class="project-buttons">
+      <a href="https://jap-ecommerce.netlify.app/loginb" class="btn">Live Demo</a>
+      <a href="https://github.com/emanueldeabreu/proyectoJaP.git" class="btn outline">GitHub</a>
     </div>
-  </section>
+  </div>
+</div>
 
   <!---------------------- SKILLS ---------------->
 <section id="skills" class="section">
@@ -286,7 +299,7 @@
 <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 <script src="particles-config.js"></script>
 
-<script src="darkmode.js"></script>
+<!--script src="darkmode.js"></script!-->
 <script src="main.js"></script>
   
 </body>
