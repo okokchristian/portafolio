@@ -61,7 +61,6 @@ h2 {
   align-items: center;
   gap: 8px;
   z-index: 99999;
-  background: var(--card-bg);
   padding: 6px 12px;
   border-radius: 20px;
   border: 1px solid var(--border-card);
