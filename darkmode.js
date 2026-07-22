@@ -1,21 +1,21 @@
-// 1. Ejecutar de inmediato el cambio de tema para evitar el parpadeo blanco
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon = themeToggle.querySelector('i');
+const body = document.body;
+
+// Cargar preferencia guardada al entrar
 if (localStorage.getItem('theme') === 'dark') {
-    document.body.classList.add('dark-theme');
+  body.classList.add('dark-theme');
+  themeIcon.classList.replace('fa-moon', 'fa-sun');
 }
 
-// 2. Esperar a que el HTML exista para activar el clic
-document.addEventListener("DOMContentLoaded", () => {
-    const toggleBtn = document.getElementById('themeToggle');
+themeToggle.addEventListener('click', () => {
+  body.classList.toggle('dark-theme');
 
-    if (toggleBtn) {
-        toggleBtn.addEventListener('click', () => {
-            document.body.classList.toggle('dark-theme');
-
-            if (document.body.classList.contains('dark-theme')) {
-                localStorage.setItem('theme', 'dark');
-            } else {
-                localStorage.setItem('theme', 'light');
-            }
-        });
-    }
+  if (body.classList.contains('dark-theme')) {
+    themeIcon.classList.replace('fa-moon', 'fa-sun');
+    localStorage.setItem('theme', 'dark');
+  } else {
+    themeIcon.classList.replace('fa-sun', 'fa-moon');
+    localStorage.setItem('theme', 'light');
+  }
 });

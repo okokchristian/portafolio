@@ -14,51 +14,37 @@
 
   <link rel="preload" href="styles.css" as="style">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="darkmode.csss">
+  <link rel="stylesheet" href="darkmode.css">
   
 </head>
 <body>
 
   <div id="particles-js"></div>
-  <!------------------ boton modo oscuro ----------------->
-<!--div class="theme-switch-wrapper" id="themeToggle">
-  <i class="fas fa-sun sun-icon"></i>
-  <div class="custom-switch">
-    <div class="custom-ball"></div>
-  </div>
-  <i class="fas fa-moon moon-icon"></i>
-</div>
 
   <!--------------------NAVBAR--------------------->
 <header>
-  <nav class="nav">
-    <h2 class="logo">C<span>Q</span></h2>
+  <nav class="navbar">
 
-    <!-- El botón que va a prender y apagar el menú en toda la web -->
-    <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
-      <i class="fas fa-bars"></i>
-    </button>
+    <div class="nav-left">
+      <a href="#" class="logo">C<span>Q</span></a>
+      <button class="hamburger" id="hamburgerBtn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
 
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#about">About Me</a></li>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
-
-    <div class="contact-icons">
-      <a href="https://github.com/okokchristian" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-github"></i>
-      </a>
-
-      <a href="https://www.linkedin.com/in/christianquintanagomez/" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-linkedin"></i>
-      </a>
-
-      <a href="mailto:christiangabrielquintanagomez@hotmail.com">
-        <i class="fas fa-envelope"></i>
-      </a>
-    </div>
     </ul>
+
+    <div class="nav-right">
+      <button id="themeToggle">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </div>
+
   </nav>
 </header>
 
