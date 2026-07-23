@@ -601,6 +601,8 @@ header {
 
   .navbar {
     justify-content: space-between;
+    background: transparent;
+  backdrop-filter: blur(1px);
   }
 
   .nav-left {
@@ -789,6 +791,8 @@ header {
   .navbar {
     height: 60px;
     padding: 0 15px;
+    background: transparent;
+  backdrop-filter: blur(1px);
   }
 
   .logo {
