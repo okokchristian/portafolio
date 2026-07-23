@@ -122,23 +122,17 @@ header {
 
 .navbar {
   width: min(1100px, 90%);
-  height: 70px;
-
+  height: 45px; /* alto navbar*/
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 0 30px;
-
   background: transparent;
   backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(18px);
-
   border: 1px solid var(--border-card);
   border-radius: 999px;
-
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
-
   transition: background 0.3s ease, border-color 0.3s ease;
 }
 
@@ -238,6 +232,20 @@ header {
 
 .buttons {
   margin-top: 20px;
+}
+ 
+#themeToggle { /*boton modo oscuro*/
+  width: 30px;
+  height: 30px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#themeToggle i {
+  font-size: 13px;
 }
 
 /* ------------------------- sections --------------------- */
@@ -394,14 +402,37 @@ header {
 .project {
   display: flex;
   align-items: center;
-  gap: 40px;
-  padding: 40px;
-  border-radius: 30px;
+  gap: 56px;
+
+  padding: 48px;
+  margin-bottom: 40px;
+
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
   background: var(--project-bg);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, .05);
-  margin-bottom: 30px;
-  transition: background 0.3s ease;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  box-shadow:
+    0 12px 32px rgba(15, 23, 42, 0.05),
+    0 24px 48px rgba(59, 130, 246, 0.06);
+
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+    border-color .35s ease,
+    background .35s ease;
+}
+
+.project:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(59, 130, 246, .25);
+
+  box-shadow:
+    0 20px 45px rgba(15, 23, 42, .08),
+    0 35px 70px rgba(59, 130, 246, .12);
 }
 
 .project-media {
@@ -418,15 +449,15 @@ header {
   flex-direction: row-reverse;
 }
 
-.project-text {
-  flex: 1;
-  text-align: left;
+.project-text p{
+    line-height:1.8;
+    color:#666;
 }
 
-.project-text h3 {
-  font-size: 28px;
-  margin-bottom: 10px;
-  color: var(--text-main);
+.project-text h3{
+    font-size:2rem;
+    font-weight:700;
+    margin-bottom:18px;
 }
 
 .project-text p {
@@ -435,24 +466,33 @@ header {
   margin-bottom: 20px;
 }
 
-.project img {
-  width: 400px;
-  border-radius: 20px;
-  transition: 0.3s;
+.project img{
+    width:100%;
+    max-width:430px;
+
+    border-radius:20px;
+
+    transition:
+        transform .45s ease,
+        box-shadow .45s ease;
 }
 
-.project img:hover {
-  transform: scale(1.05);
+.project:hover img{
+    transform:scale(1.02);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.12);
 }
 
 .project-buttons {
   display: flex;
-  gap: 15px;
+  gap: 20px; /*separacion live demo git hub*/
+  
 }
 
 .project-tags {
   display: flex;
-  gap: 10px;
+  gap: 10px; /*separacion entre tags proyecto */
   flex-wrap: wrap;
   margin-bottom: 20px;
 }
@@ -468,6 +508,8 @@ header {
 #projects h2 {
   margin-bottom: 50px;
 }
+
+
 
 /* ------------------- footer ---------------------- */
 .footer {
