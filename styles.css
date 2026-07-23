@@ -130,8 +130,8 @@ header {
 
   padding: 0 30px;
 
-  background: var(--navbar-bg);
-  backdrop-filter: blur(18px);
+  background: transparent;
+  backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(18px);
 
   border: 1px solid var(--border-card);
