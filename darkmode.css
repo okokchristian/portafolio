@@ -10,8 +10,9 @@
   --form-focus-bg: #cecfd2;
   --btn-bg: #111111;
   --btn-text: #ffffff;
-  --project-bg: rgba(255, 255, 255, 0.40);
   --navbar-bg: #e9eaf0;
+    --project-bg: #01010111;
+
 }
 
 body.dark-theme {
@@ -25,6 +26,7 @@ body.dark-theme {
   --form-focus-bg: #33353f;
   --btn-bg: #f3f3f6;
   --btn-text: #1c1e26;
-  --project-bg: rgba(255, 255, 255, 0.05);
   --navbar-bg: #23252d;
+    --project-bg: #01010111;
+
 }
