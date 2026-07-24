@@ -195,6 +195,34 @@ header {
   transform: translateY(-2px);
 }
 
+.menu-socials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: .4s ease;
+}
+
+.menu-socials a{
+    font-size: 1.6rem;
+    color: var(--text);
+    transition: color .3s ease, transform .3s ease;
+}
+
+.menu-socials a:hover{
+    color: var(--primary);
+    transform: translateY(-3px);
+}
+
+.nav-menu.active .menu-socials{
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: .5s;
+}
+
+
 /* -------------------- hero ----------------------*/
 .hero {
   height: 100vh;
@@ -248,6 +276,37 @@ header {
   font-size: 13px;
 }
 
+.hero-intro,
+.hero-name,
+.hero-role,
+.hero-do,
+.buttons{
+    opacity: 0;
+    transform: translateY(25px);
+    animation: heroFade .8s ease forwards;
+}
+
+.hero-intro{ animation-delay: .1s; }
+
+.hero-name{ animation-delay: .25s; }
+
+.hero-role{ animation-delay: .4s; }
+
+.hero-do{ animation-delay: .55s; }
+
+.buttons{ animation-delay: .7s; }
+
+@keyframes heroFade{
+    from{
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 /* ------------------------- sections --------------------- */
 .section {
   padding: 100px 0;
@@ -700,10 +759,19 @@ header {
     visibility: visible;
     transform: translateY(0);
   }
+  
+  .nav-menu.active li {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
 
 .nav-menu li {
   list-style: none;
   width: 80%;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.4s ease;
 }
 
 .nav-menu a {
