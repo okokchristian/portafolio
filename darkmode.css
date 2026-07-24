@@ -25,6 +25,6 @@ body.dark-theme {
   --form-focus-bg: #33353f;
   --btn-bg: #f3f3f6;
   --btn-text: #1c1e26;
-  --project-bg: rgba(255, 255, 255, 0.05);
+  --project-bg: #2a2c33;
   --navbar-bg: #23252d;
 }

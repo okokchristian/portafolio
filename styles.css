@@ -462,14 +462,13 @@ header {
   display: flex;
   align-items: center;
   gap: 56px;
-
   padding: 48px;
   margin-bottom: 40px;
 
   border-radius: 28px;
   border: 1px solid rgba(255, 255, 255, 0.08);
 
-  background: var(--project-bg);
+--project-bg: #ffffff;
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
 
