@@ -784,7 +784,7 @@ header {
   text-align: center;
   padding: 12px 0;
   border: 2px solid var(--border-card);
-  border-radius: 20px;
+  border-radius: 30px;
   transition: all 0.3s ease;
 }
 
