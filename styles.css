@@ -10,7 +10,7 @@
   --form-focus-bg: #cecfd2;
   --btn-bg: #111111;
   --btn-text: #ffffff;
-  --project-bg: rgba(255, 255, 255, 0.40);
+  --project-bg: #ffffff;
   --navbar-bg: #e9eaf0;
 }
 
@@ -468,7 +468,7 @@ header {
   border-radius: 28px;
   border: 1px solid rgba(255, 255, 255, 0.08);
 
---project-bg: #ffffff;
+  background: var(--project-bg);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
 
