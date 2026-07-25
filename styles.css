@@ -33,7 +33,7 @@ body.dark-theme {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Urbanist", arial, sans-serif;
+  font-family: "Urbanist",Arial, sans-serif;
 }
 
 body {
@@ -325,6 +325,17 @@ header {
   margin-bottom: 30px;
 }
 
+.about-text {
+  font-weight: normal;
+  max-width: 600px;
+  color: var(--btn-bg);
+  margin-top: 20px;
+  line-height: 1.7;
+  font-size: 1.1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .about-info {
   display: flex !important;
   flex-direction: row !important;
@@ -333,6 +344,9 @@ header {
   gap: 15px;
   margin-top: 30px;
   margin-bottom: 20px;
+  color: var(--btn-bg);
+  line-height: 1.7;
+  font-size: 1.1rem;
 }
 
 .info-item {
