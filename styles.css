@@ -79,7 +79,7 @@ h2 {
 
 .btn.outline {
   background: transparent;
-  border: 2px solid var(--text-main);
+  border: 1px solid var(--text-main);
   color: var(--text-main);
 }
 
@@ -222,6 +222,19 @@ header {
     transition-delay: .5s;
 }
 
+#themeToggle { /*boton modo oscuro*/
+  width: 30px;
+  height: 30px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#themeToggle i {
+  font-size: 13px;
+}
 
 /* -------------------- hero ----------------------*/
 .hero {
@@ -253,33 +266,55 @@ header {
   font-weight: normal;
   max-width: 600px;
   color: var(--text-muted);
-  margin-top: 20px;
+  margin-top: 10px;
   line-height: 1.7;
   font-size: 1.1rem;
 }
 
-.buttons {
-  margin-top: 20px;
-}
- 
-#themeToggle { /*boton modo oscuro*/
-  width: 30px;
-  height: 30px;
-  border: none;
-  display: flex;
-  justify-content: center;
+.hero-available {
+  display: inline-flex;
   align-items: center;
-  cursor: pointer;
+  gap: 12px;
+  padding: 10px 22px;
+  margin-top: 10px;
+  background: rgba(74, 222, 128, 0.08);
+  border: 1px solid rgba(74, 222, 128, 0.486);
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4ade80;
 }
 
-#themeToggle i {
-  font-size: 13px;
+.available-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.6);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(74, 222, 128, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
+  }
+}
+
+.buttons {
+  margin-top: 20px;
 }
 
 .hero-intro,
 .hero-name,
 .hero-role,
 .hero-do,
+.hero-available,
 .buttons{
     opacity: 0;
     transform: translateY(25px);
@@ -307,6 +342,7 @@ header {
         transform: translateY(0);
     }
 }
+
 /* ------------------------- sections --------------------- */
 .section {
   padding: 100px 0;
@@ -571,7 +607,8 @@ body.dark .about-photo {
 }
 
 .project-text p {
-  color: var(--text-muted);
+  color: #111111;
+  font-size: 18px;
   line-height: 1.6;
   margin-bottom: 20px;
 }
@@ -597,14 +634,14 @@ body.dark .about-photo {
 .project-buttons {
   display: flex;
   gap: 20px; /*separacion live demo git hub*/
-  
+  margin-top: 10px;
 }
 
 .project-tags {
   display: flex;
   gap: 10px; /*separacion entre tags proyecto */
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .project-tags span {
@@ -618,8 +655,6 @@ body.dark .about-photo {
 #projects h2 {
   margin-bottom: 50px;
 }
-
-
 
 /* ------------------- footer ---------------------- */
 .footer {
