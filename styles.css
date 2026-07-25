@@ -478,7 +478,7 @@ body.dark .about-photo {
 }
 
 .project-text p {
-  color: #111111;
+  color: var(--btn-bg);
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 20px;
