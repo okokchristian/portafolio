@@ -58,56 +58,6 @@ h2 {
   color: var(--primary);
 }
 
-/* ----------------- botones e iconos de contacto) --------------*/
-
-.btn {
-  display: inline-block;
-  padding: 10px 22px;
-  background: var(--btn-bg);
-  color: var(--btn-text);
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: 600;
-  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.15s ease;
-}
-
-.btn:hover {
-  background: var(--primary);
-  color: #fff;
-  transform: translateY(-2px);
-}
-
-.btn.outline {
-  background: transparent;
-  border: 1px solid var(--text-main);
-  color: var(--text-main);
-}
-
-.btn.outline:hover {
-  background: var(--primary);
-  border-color: var(--primary);
-  color: #fff;
-}
-
-.contact-icons {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.contact-icons a {
-  font-size: 35px;
-  color: var(--text-main);
-  transition: 0.3s;
-}
-
-.contact-icons a:hover {
-  color: var(--primary);
-  transform: scale(1.2);
-}
-
 /* ------------------- navbar ------------------------ */
 
 header {
@@ -467,85 +417,6 @@ body.dark .about-photo {
   }
 }
 
-/* ------------------- skills ------------------ */
-#skills h2 {
-  margin-bottom: 40px;
-}
-
-.section .skills {
-  display: grid;
-  grid-template-columns: repeat(3, 120px);
-  justify-content: center;
-  gap: 20px;
-}
-
-.section .skill {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-}
-
-.skill i {
-  font-size: 70px;
-  color: var(--text-main);
-  transition: 0.3s;
-}
-
-.skill p {
-  margin: 0;
-  font-size: 14px;
-  color: var(--text-muted);
-}
-
-.skill:hover i {
-  color: var(--primary);
-  transform: scale(1.2);
-}
-
-.section-subtitle {
-  color: var(--text-muted);
-  margin-top: 10px;
-  margin-bottom: 50px;
-}
-
-/* ------------------- currently learning ------------------ */
-.learning-container {
-  margin-top: 50px;
-  padding-top: 30px;
-}
-
-.learning-title {
-  font-size: 20px;
-  color: var(--text-main);
-  margin-bottom: 25px;
-  font-weight: 600;
-}
-
-.learning-skills {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-}
-
-.learning-item i {
-  color: var(--text-main);
-  filter: grayscale(40%);
-}
-
-.learning-item:hover i {
-  filter: grayscale(0%);
-  color: var(--primary);
-}
-
-.learning-item a {
-  text-decoration: none;
-}
-
-.learning-item i {
-  text-decoration: none;
-}
-
 /* ----------------- proyectos ----------------------- */
 .project {
   display: flex;
@@ -633,13 +504,13 @@ body.dark .about-photo {
 
 .project-buttons {
   display: flex;
-  gap: 20px; /*separacion live demo git hub*/
+  gap: 20px; /*separacion live demo / git hub*/
   margin-top: 10px;
 }
 
 .project-tags {
   display: flex;
-  gap: 10px; /*separacion entre tags proyecto */
+  gap: 10px; /*separacion entre tags de proyectos */
   flex-wrap: wrap;
   margin-bottom: 10px;
 }
@@ -654,6 +525,85 @@ body.dark .about-photo {
 
 #projects h2 {
   margin-bottom: 50px;
+}
+
+/* ------------------- skills ------------------ */
+#skills h2 {
+  margin-bottom: 40px;
+}
+
+.section .skills {
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  justify-content: center;
+  gap: 20px;
+}
+
+.section .skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.skill i {
+  font-size: 70px;
+  color: var(--text-main);
+  transition: 0.3s;
+}
+
+.skill p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.skill:hover i {
+  color: var(--primary);
+  transform: scale(1.2);
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+/* ------------------- currently learning ------------------ */
+.learning-container {
+  margin-top: 50px;
+  padding-top: 30px;
+}
+
+.learning-title {
+  font-size: 20px;
+  color: var(--text-main);
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.learning-skills {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.learning-item i {
+  color: var(--text-main);
+  filter: grayscale(40%);
+}
+
+.learning-item:hover i {
+  filter: grayscale(0%);
+  color: var(--primary);
+}
+
+.learning-item a {
+  text-decoration: none;
+}
+
+.learning-item i {
+  text-decoration: none;
 }
 
 /* ------------------- footer ---------------------- */
@@ -758,14 +708,63 @@ body.dark .about-photo {
   transform: translateY(-2px);
 }
 
-/* ----------------- socials ------------------*/
-
 .footer-text {
   font-size: 14px;
   color: var(--text-muted);
   opacity: 0.7;
 }
 
+/* ----------------- botones e iconos de contacto) --------------*/
+
+.btn {
+  display: inline-block;
+  padding: 10px 22px;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.15s ease;
+}
+
+.btn:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn.outline {
+  background: transparent;
+  border: 1px solid var(--text-main);
+  color: var(--text-main);
+}
+
+.btn.outline:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.contact-icons a {
+  font-size: 35px;
+  color: var(--text-main);
+  transition: 0.3s;
+}
+
+.contact-icons a:hover {
+  color: var(--primary);
+  transform: scale(1.2);
+}
+
+/* ---------------- animaciones y responsividad ---------------------*/
 #particles-js {
   position: fixed;
   width: 100%;
@@ -775,7 +774,7 @@ body.dark .about-photo {
   left: 0;
 }
 
-/* ---------------- animaciones y responsividad ---------------------*/
+
 @keyframes fadeUp {
   to {
     opacity: 1;
