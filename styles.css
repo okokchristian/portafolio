@@ -488,7 +488,7 @@ body.dark .about-photo {
     width:100%;
     max-width:430px;
 
-    border-radius:20px;
+    border-radius:10px;
 
     transition:
         transform .45s ease,
@@ -499,7 +499,7 @@ body.dark .about-photo {
     transform:scale(1.02);
 
     box-shadow:
-        0 20px 40px rgba(0,0,0,.12);
+        0 20px 40px rgba(167, 9, 9, 0.12);
 }
 
 .project-buttons {
