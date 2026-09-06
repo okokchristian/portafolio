@@ -10,7 +10,7 @@ particlesJS("particles-js", {
       type: "circle"
     },
     opacity: {
-      value: 0.5
+      value: 0.4
     },
     size: {
       value: 3
