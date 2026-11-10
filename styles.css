@@ -711,7 +711,11 @@ body.dark .about-photo {
 /* ----------------- botones e iconos de contacto) --------------*/
 
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  border: 1px solid transparent;
   padding: 10px 22px;
   background: var(--btn-bg);
   color: var(--btn-text);

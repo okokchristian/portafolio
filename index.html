@@ -132,14 +132,43 @@ I'm continuously learning new technologies and looking for my first opportunity 
   <div class="container">
       <h2>Projects</h2>
 
+
+<!-----------------------ATMOS-------------------------->
+<div class="project">
+  <div class="project-text">
+    <h3>ATMOS deco</h3>
+    <p>
+      E-commerce site for a Uruguay-based brand of 3D-printed bioplastic lamps, live at atmosdeco.uy. Product catalog with search, color variants (including made-to-order colors) and an image gallery. Checkout through the Mercado Pago API, with payments created server-side in Netlify Functions, plus a bank transfer flow; webhooks log every order to Google Sheets. Per-product share previews via a Netlify Edge Function, SEO setup (sitemap, canonical URLs, Search Console), and a responsive glassmorphism UI in vanilla HTML/CSS/JS.
+    </p>
+
+    <div class="project-tags">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>Netlify Functions</span>
+      <span>Mercado Pago API</span>
+      <span>SEO</span>
+      <span>Responsive</span>
+
+    </div>
+  </div>
+
+  <div class="project-media">
+    <img src="img/atmos.png" alt="ATMOS deco">
+    <div class="project-buttons">
+      <a href="https://atmosdeco.uy" class="btn">Live Demo</a>
+      <a href="https://github.com/okokchristian/ATMOSdeco.git" class="btn outline">GitHub</a>
+    </div>
+  </div>
+</div>
+
 <!-------------------------ESPACIO PILATES -------------------------->
 
 <div class="project">
   <div class="project-text">
     <h3>Espacio Pilates</h3>
     <p>
-      Booking system for a fictional pilates studio, with a Firebase/Firestore backend: real-time weekly agenda organized in day tabs, a reservation modal with form validation (name, email, phone), and Firestore transactions to prevent race conditions when multiple people book at the same time. Includes Firestore security rules (verified through manual penetration testing) that protect customer data and prevent client-side tampering with seat counts. A Node.js admin script (Firebase Admin SDK) automates weekly maintenance: resets availability across 44 time slots and archives the week's reservations to a Google Sheets history log, synced in real time via Zapier.
-    </p>
+Booking system for a fictional pilates studio, built on Firebase/Firestore. Real-time weekly agenda with day tabs and a validated reservation modal; Firestore transactions prevent double bookings when several people book the same slot. Security rules, manually penetration-tested, protect customer data and block client-side tampering with seat counts. A Node.js admin script (Firebase Admin SDK) resets availability across 44 time slots every week and archives reservations to a Google Sheets log via Zapier.    </p>
 
     <div class="project-tags">
   <span>Personal Project</span>
@@ -148,6 +177,7 @@ I'm continuously learning new technologies and looking for my first opportunity 
   <span>JavaScript</span>
   <span>Firebase</span>
   <span>Node.js</span>
+  <span>Zapier</span>
   <span>Responsive</span>
 </div>
   </div>
@@ -162,35 +192,9 @@ I'm continuously learning new technologies and looking for my first opportunity 
 </div>
 
 <!---------------------------------------------------------------------->
-    
-<!------------------
-<div class="project">
-  <div class="project-text">
-    <h3>ATMOS deco</h3>
-    <p>
-      Multi-page e-commerce site for a Uruguay-based brand selling handcrafted, 3D-printed bioplastic lamps. Built a full product catalog with search, an animated mobile nav, and an FAQ modal — all in vanilla HTML/CSS/JS. Integrated Mercado Pago payment links with dedicated status pages for a complete checkout flow, no backend required. Fully responsive, with glassmorphism UI and scroll-triggered animations throughout.
-    </p>
 
-    <div class="project-tags">
-      <span>Personal Project</span>
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>JavaScript</span>
-      <span>Responsive</span>
-    </div>
-  </div>
-
-  <div class="project-media">
-    <img src="img/atmos.png" alt="ATMOS deco">
-    <div class="project-buttons">
-      <a href="https://atmosdeco.netlify.app/" class="btn">Live Demo</a>
-      <a href="https://github.com/okokchristian/ATMOSdeco.git" class="btn outline">GitHub</a>
-    </div>
-  </div>
-</div>
------------------------>
-
- <!----------------- PROYECTO LANDING ARTISTA --------->
+<!----------------- PROYECTO LANDING ARTISTA --------->
+<!-------------
 <div class="project">
   <div class="project-text">
     <h3>Artist Landing Page</h3>
@@ -217,7 +221,7 @@ I'm continuously learning new technologies and looking for my first opportunity 
     </div>
   </div>
 </div>
-
+-----!>
 
 <!----------------- PROYECTO VELAS --------------->
 <div class="project reverse">
